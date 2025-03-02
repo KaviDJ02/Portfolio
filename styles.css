@@ -1,0 +1,340 @@
+:root{
+
+}
+
+@layer reset {
+    /* Box sizing rules */
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    /* Prevent font size inflation */
+    html {
+        -moz-text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+    }
+
+    /* Remove default margin in favour of better control in authored CSS */
+    body, h1, h2, h3, h4, p,
+    figure, blockquote, dl, dd {
+        margin-block-end: 0;
+    }
+
+    /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+    ul[role='list'],
+    ol[role='list'] {
+        list-style: none;
+    }
+
+    /* Set core body defaults */
+    body {
+        min-height: 100vh;
+        line-height: 1.5;
+    }
+
+    /* Set shorter line heights on headings and interactive elements */
+    h1, h2, h3, h4,
+    button, input, label {
+        line-height: 1.1;
+    }
+
+    /* Balance text wrapping on headings */
+    h1, h2,
+    h3, h4 {
+        text-wrap: balance;
+    }
+
+    /* A elements that don't have a class get default styles */
+    a:not([class]) {
+        text-decoration-skip-ink: auto;
+        color: currentColor;
+    }
+
+    /* Make images easier to work with */
+    img,
+    picture {
+        max-width: 100%;
+        display: block;
+    }
+
+    /* Inherit fonts for inputs and buttons */
+    input, button,
+    textarea, select {
+        font-family: inherit;
+        font-size: inherit;
+    }
+
+    /* Make sure textareas without a rows attribute are not tiny */
+    textarea:not([rows]) {
+        min-height: 10em;
+    }
+
+    /* Anything that has been anchored to should have extra scroll margin */
+    :target {
+        scroll-margin-block: 5ex;
+    }
+}
+
+@layer poppins {
+    .poppins-thin {
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    .poppins-extralight {
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+    }
+
+    .poppins-light {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .poppins-medium {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .poppins-semibold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    .poppins-bold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .poppins-extrabold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+    }
+
+    .poppins-black {
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+    }
+
+    .poppins-thin-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        font-style: italic;
+    }
+
+    .poppins-extralight-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: italic;
+    }
+
+    .poppins-light-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    .poppins-regular-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    .poppins-medium-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    .poppins-semibold-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: italic;
+    }
+
+    .poppins-bold-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .poppins-extrabold-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: italic;
+    }
+
+    .poppins-black-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: italic;
+    }
+}
+
+@layer base {
+    .headerNav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: rgba(5, 5, 5, 0.5);
+        color: white;
+    }
+
+    .logo-text{
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+
+    .nav-links{
+        display: flex;
+        align-items: center;
+    }
+    .nav-links li{
+        list-style: none;
+        margin: 0 12px;
+    }
+    .nav-links li a{
+        position: relative;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 6px 0;
+        text-decoration: none;
+    }
+    .nav-links li a:before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 0%;
+        background: #fb2804;
+        border-radius: 12px;
+        transition: all 0.4s ease;
+    }
+    .nav-links li a:hover:before{
+        width: 100%;
+    }
+
+    .header{
+        padding-bottom: 3rem;
+    }
+
+    .hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 4rem;
+    }
+
+    .hero-img-bg{
+        background-color: #ffffff;
+        border-radius: 50%;
+        border: 2px solid #040404;
+        padding: 1rem;
+    }
+
+    .hero-img{
+        height: 200px;
+        width: 200px;
+    }
+
+    .hero-title{
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+        color: white;
+
+    }
+
+    .hero-subtitle{
+        font-size: 1rem;
+        font-weight: 400;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        color: white;
+
+    }
+
+    .hero-buttons{
+        display: flex;
+        gap: 1rem;
+    }
+
+    .primary-button{
+        padding: 10px 20px;
+        background-color: #fb2804;
+        border: none;
+        border-radius: 12px;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
+
+    .primary-button:hover{
+        background-color: #fa6060;
+
+    }
+
+    .primary-button>a{
+        color: white;
+        text-decoration: none;
+    }
+
+    .cv-button{
+        padding: 10px 20px;
+        background-color: transparent;
+        border: 2px solid #e10303;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+    .cv-img{
+        height: 30px;
+        width: 30px;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 4rem;
+    }
+
+    .section-subtitle{
+        padding-inline: 40rem ;
+        flex: auto;
+        text-align: center;
+    }
+
+    .section-subtitle>mark{
+        background-color: rgba(251, 40, 4, 0.5);
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .
+}
