@@ -397,7 +397,32 @@
         text-align: left;
     }
 
+    .filter-container {
+        margin-bottom: 20px;
+    }
+    .filter-btn {
+        background: transparent;
+        border-radius: 12px;
+        border: 2px white solid;
+        padding: 10px 15px;
+        color: white;
+        margin: 5px;
+        cursor: pointer;
+    }
 
+    .filter-btn:hover {
+        background: #bc2101;
+    }
+
+    .filter-btn.active {
+        background: white;
+        color: var(--primary);
+    }
+
+    .filter-btn.active:hover {
+        background: #e1e1e1;
+        color: var(--primary);
+    }
 
     .projects{
         display: flex;
@@ -409,12 +434,20 @@
         background-color: var(--primary);
     }
 
+    .projects .section-title{
+        color: white;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
     .projects-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
         padding: 50px;
         justify-content: center;
+        align-items: center;
     }
 
     .project-card {
@@ -429,6 +462,24 @@
         width: 100%;
         height: 180px;
         object-fit: cover;
+    }
+
+    .dropdown {
+        display: none;
+        margin: 10px 0;
+    }
+    select {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .filter-container {
+            display: none;
+        }
+        .dropdown {
+            display: block;
+        }
     }
 
     .content {
@@ -484,5 +535,44 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         max-width: 300px;
     }
+
+    .skills {
+        font-family: "Arial", sans-serif;
+        text-align: center;
+        padding: 30px;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin-top: 20px;
+        color: var(--primary); /* Customize color */
+    }
+
+    .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .skills-list img {
+        background-color: transparent;
+        padding: 8px;
+        border-radius: 5px;
+        height: 80px;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .skills-list img:hover {
+        transform: scale(1.1);
+    }
+
 
 }

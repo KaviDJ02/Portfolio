@@ -3,101 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KaviDJ - Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Rotating Skills Showcase</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #151010;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .circle-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      background: #ff0000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-weight: bold;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    }
+
+    .orbit {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .orbit div {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: #300d0d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      box-shadow: 0 0 5px rgba(255, 0, 0, 0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-size: 12px;
+      text-align: center;
+      padding: 5px;
+    }
+
+    .orbit div:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 15px rgba(255, 0, 0, 1);
+    }
+
+    /* Rotating Layers */
+    .layer-1 { animation: rotate 12s linear infinite; }
+    .layer-2 { animation: rotate 18s linear infinite reverse; }
+    .layer-3 { animation: rotate 25s linear infinite; }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
 </head>
-
 <body>
-<header>
-  <nav>
-    <ul class="nav-links">
-      <li>
-        <h1 class="logo">KaviDJ</h1>
-      </li>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
 
-<main>
-  <section id="home" class="hero animate-on-scroll">
-    <div class="hero-content">
-      <img src="assets/profile-pic.png" alt="photo" class="profile-pic">
-      <h2>Hi, I'm Kavindu Jayasundara</h2>
-      <p>UG Software Engineer</p>
-      <div class="hero-buttons">
-        <button class="primary">Hire Me</button>
-        <button>View My Work</button>
-      </div>
-    </div>
-  </section>
+<div class="circle-container">
+  <div class="center">Skills</div>
 
-  <section id="about" class="animate-on-scroll">
-    <h2>About Me</h2>
-    <p>I'm a Software Engineer with a passion for building efficient, user-friendly applications...</p>
-    <div class="certifications">
-      <div class="card">Certificate 1</div>
-      <div class="card">Certificate 2</div>
-      <div class="card">Certificate 3</div>
-    </div>
-  </section>
+  <!-- Inner Layer -->
+  <div class="orbit layer-1" id="layer1"></div>
 
-  <section id="projects" class="animate-on-scroll">
-    <h2>Projects</h2>
-    <div class="project-carousel">
-      <div class="project-card">
-        <img src="project1.jpg" alt="Project 1">
-        <h3>Project Title</h3>
-        <p>Project description...</p>
-      </div>
-      <div class="project-card">
-        <img src="project2.jpg" alt="Project 2">
-        <h3>Project Title</h3>
-        <p>Project description...</p>
-      </div>
-    </div>
-  </section>
+  <!-- Middle Layer -->
+  <div class="orbit layer-2" id="layer2"></div>
 
-  <section id="skills" class="animate-on-scroll">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div>
-        <h3>Programming & Development</h3>
-        <p>Java, HTML, CSS, JavaScrip, MySQL</p>
-      </div>
-      <div>
-        <h3>Tools & Platforms</h3>
-        <p>Selenium, JMeter, Figma, Git, Github, Postman</p>
-      </div>
-      <div>
-        <h3>Other</h3>
-        <p>Lightroom, Photoshop, Blender</p>
-      </div>
-    </div>
-  </section>
+  <!-- Outer Layer -->
+  <div class="orbit layer-3" id="layer3"></div>
+</div>
 
-  <section id="contact" class="animate-on-scroll">
-    <h2>Contact Me</h2>
-    <form action="#" method="POST">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-</main>
+<script>
+  const skills = [
+    "Java", "Python", "JavaScript", "HTML", "CSS", "React", "Node",
+    "MongoDB", "SQL", "Git", "Docker", "AWS", "Next.js", "Figma",
+    "GraphQL", "Firebase", "C", "TypeScript"
+  ];
 
-<footer>
-  <p>&copy; 2025 Kavindu Jayasundara</p>
+  function createSkillCircles(containerId, skillList, radius) {
+    const container = document.getElementById(containerId);
+    const totalSkills = skillList.length;
+    const angleStep = (2 * Math.PI) / totalSkills;
 
-  <div class="social-links">
-    <a href="#">Gmail</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Behance</a>
-  </div>
-</footer>
+    skillList.forEach((skill, index) => {
+      const angle = index * angleStep;
+      const x = Math.cos(angle) * radius + 150; // Centering
+      const y = Math.sin(angle) * radius + 150;
+
+      const skillDiv = document.createElement("div");
+      skillDiv.innerText = skill;
+      skillDiv.style.left = `${x}px`;
+      skillDiv.style.top = `${y}px`;
+
+      container.appendChild(skillDiv);
+    });
+  }
+
+  createSkillCircles("layer1", skills.slice(0, 4), 80);
+  createSkillCircles("layer2", skills.slice(4, 8), 130);
+  createSkillCircles("layer3", skills.slice(8, 18), 180);
+</script>
+
+<script src="assets/oneko.js"></script>
+
 </body>
 </html>

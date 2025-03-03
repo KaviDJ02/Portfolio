@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: #fff;
+            text-align: center;
+        }
+        .filter-container {
+            margin-bottom: 20px;
+        }
+        .filter-btn {
+            background: cyan;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .filter-btn.active {
+            background: #ff9800;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .project {
+            width: 250px;
+            margin: 10px;
+            padding: 15px;
+            background: #222;
+            border-radius: 5px;
+            display: none;
+        }
+        .project img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .dropdown {
+            display: none;
+            margin: 10px 0;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .filter-container {
+                display: none;
+            }
+            .dropdown {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>My Portfolio</h1>
+
+<div class="filter-container">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="development">Development</button>
+    <button class="filter-btn" data-category="uiux">UI/UX</button>
+    <button class="filter-btn" data-category="qa">QA</button>
+    <button class="filter-btn" data-category="photography">Photography</button>
+    <button class="filter-btn" data-category="other">Other</button>
+</div>
+
+<div class="dropdown">
+    <select id="categorySelect">
+        <option value="all">All</option>
+        <option value="development">Development</option>
+        <option value="uiux">UI/UX</option>
+        <option value="qa">QA</option>
+        <option value="photography">Photography</option>
+        <option value="other">Other</option>
+    </select>
+</div>
+
+<div class="projects">
+    <div class="project" data-category="development">
+        <img src="project1.jpg" alt="Project 1">
+        <h3>Project 1</h3>
+    </div>
+    <div class="project" data-category="uiux">
+        <img src="project2.jpg" alt="Project 2">
+        <h3>Project 2</h3>
+    </div>
+    <div class="project" data-category="qa">
+        <img src="project3.jpg" alt="Project 3">
+        <h3>Project 3</h3>
+    </div>
+    <div class="project" data-category="photography">
+        <img src="project4.jpg" alt="Project 4">
+        <h3>Project 4</h3>
+    </div>
+    <div class="project" data-category="other">
+        <img src="project5.jpg" alt="Project 5">
+        <h3>Project 5</h3>
+    </div>
+
+    <img src="https://skillicons.dev/icons?i=js" alt="js">
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const buttons = document.querySelectorAll(".filter-btn");
+        const projects = document.querySelectorAll(".project");
+        const dropdown = document.getElementById("categorySelect");
+
+        function filterProjects(category) {
+            projects.forEach(project => {
+                if (category === "all" || project.getAttribute("data-category") === category) {
+                    project.style.display = "block";
+                } else {
+                    project.style.display = "none";
+                }
+            });
+        }
+
+        buttons.forEach(button => {
+            button.addEventListener("click", function() {
+                buttons.forEach(btn => btn.classList.remove("active"));
+                this.classList.add("active");
+                filterProjects(this.getAttribute("data-category"));
+            });
+        });
+
+        dropdown.addEventListener("change", function() {
+            filterProjects(this.value);
+        });
+
+        filterProjects("all"); // Show all projects initially
+    });
+</script>
+
+</body>
+</html>

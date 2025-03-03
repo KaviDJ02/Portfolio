@@ -96,15 +96,35 @@
 
     <section class="projects">
         <h2 class="section-title poppins-bold">Projects</h2>
+
+        <div class="filter-container poppins-regular">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="development">Development</button>
+            <button class="filter-btn" data-category="uiux">UI/UX</button>
+            <button class="filter-btn" data-category="qa">QA</button>
+            <button class="filter-btn" data-category="photography">Photography</button>
+            <button class="filter-btn" data-category="other">Other</button>
+        </div>
+
+        <div class="dropdown">
+            <select id="categorySelect">
+                <option value="all">All</option>
+                <option value="development">Development</option>
+                <option value="uiux">UI/UX</option>
+                <option value="qa">QA</option>
+                <option value="photography">Photography</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
         <div class="projects-container">
-
-            <div class="project-card">
+            <div class="project-card" data-category="development">
                 <div class="github-circle">
-                    <a href="assets/project.jpg" target="_blank">🔗</a>
+                    <a href="project1.jpg" target="_blank">🔗</a>
                 </div>
                 <img src="assets/project.jpg" alt="Project 1">
                 <div class="content">
-                    <h3 class="poppins-medium">Project Title</h3>
+                    <h3 class="poppins-medium">Project 1</h3>
                     <p class="poppins-regular">Brief description of the project. Explain what it does or how it was made.</p>
                     <div class="tech-stack poppins-regular">
                         <p class="tech">Java</p>
@@ -113,90 +133,135 @@
                     </div>
                 </div>
             </div>
-
-            <div class="project-card">
+            <div class="project-card" data-category="uiux">
                 <div class="github-circle">
-                    <a href="assets/project.jpg" target="_blank">🔗</a>
+                    <a href="project2.jpg" target="_blank">🔗</a>
                 </div>
-                <img src="assets/project.jpg" alt="Project 1">
+                <img src="assets/project.jpg" alt="Project 2">
                 <div class="content">
-                    <h3 class="poppins-medium">Project Title</h3>
+                    <h3 class="poppins-medium">Project 2</h3>
                     <p class="poppins-regular">Brief description of the project. Explain what it does or how it was made.</p>
                     <div class="tech-stack poppins-regular">
-                        <p class="tech">Java</p>
-                        <p class="tech">JavaFX</p>
-                        <p class="tech">MYSQL</p>
+                        <p class="tech">Figma</p>
+                        <p class="tech">Sketch</p>
                     </div>
                 </div>
             </div>
-
-            <div class="project-card">
+            <div class="project-card" data-category="qa">
                 <div class="github-circle">
-                    <a href="assets/project.jpg" target="_blank">🔗</a>
+                    <a href="project3.jpg" target="_blank">🔗</a>
                 </div>
-                <img src="assets/project.jpg" alt="Project 1">
+                <img src="assets/project.jpg" alt="Project 3">
                 <div class="content">
-                    <h3 class="poppins-medium">Project Title</h3>
+                    <h3 class="poppins-medium">Project 3</h3>
                     <p class="poppins-regular">Brief description of the project. Explain what it does or how it was made.</p>
                     <div class="tech-stack poppins-regular">
-                        <p class="tech">Java</p>
-                        <p class="tech">JavaFX</p>
-                        <p class="tech">MYSQL</p>
+                        <p class="tech">Selenium</p>
+                        <p class="tech">JUnit</p>
                     </div>
                 </div>
             </div>
-
-            <div class="project-card">
+            <div class="project-card" data-category="photography">
                 <div class="github-circle">
-                    <a href="assets/project.jpg" target="_blank">🔗</a>
+                    <a href="project4.jpg" target="_blank">🔗</a>
                 </div>
-                <img src="assets/project.jpg" alt="Project 1">
+                <img src="assets/project.jpg" alt="Project 4">
                 <div class="content">
-                    <h3 class="poppins-medium">Project Title</h3>
+                    <h3 class="poppins-medium">Project 4</h3>
                     <p class="poppins-regular">Brief description of the project. Explain what it does or how it was made.</p>
                     <div class="tech-stack poppins-regular">
-                        <p class="tech">Java</p>
-                        <p class="tech">JavaFX</p>
-                        <p class="tech">MYSQL</p>
+                        <p class="tech">Lightroom</p>
+                        <p class="tech">Photoshop</p>
                     </div>
                 </div>
             </div>
-
-            <div class="project-card">
+            <div class="project-card" data-category="other">
                 <div class="github-circle">
-                    <a href="assets/project.jpg" target="_blank">🔗</a>
+                    <a href="project5.jpg" target="_blank">🔗</a>
                 </div>
-                <img src="assets/project.jpg" alt="Project 1">
+                <img src="assets/project.jpg" alt="Project 5">
                 <div class="content">
-                    <h3 class="poppins-medium">Project Title</h3>
+                    <h3 class="poppins-medium">Project 5</h3>
                     <p class="poppins-regular">Brief description of the project. Explain what it does or how it was made.</p>
                     <div class="tech-stack poppins-regular">
-                        <p class="tech">Java</p>
-                        <p class="tech">JavaFX</p>
-                        <p class="tech">MYSQL</p>
+                        <p class="tech">Python</p>
+                        <p class="tech">Django</p>
                     </div>
                 </div>
             </div>
-
-            <div class="project-card">
-                <div class="github-circle">
-                    <a href="assets/project.jpg" target="_blank">🔗</a>
-                </div>
-                <img src="assets/project.jpg" alt="Project 1">
-                <div class="content">
-                    <h3 class="poppins-medium">Project Title</h3>
-                    <p class="poppins-regular">Brief description of the project. Explain what it does or how it was made.</p>
-                    <div class="tech-stack poppins-regular">
-                        <p class="tech">Java</p>
-                        <p class="tech">JavaFX</p>
-                        <p class="tech">MYSQL</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
+
+    <section class="skills">
+        <h2 class="section-title poppins-bold">Skills</h2>
+        <div class="category">
+            <h3>Programming & Development</h3>
+            <div class="skills-list">
+                <img src="https://skillicons.dev/icons?i=java" alt="Java">
+                <img src="https://skillicons.dev/icons?i=html" alt="HTML">
+                <img src="https://skillicons.dev/icons?i=css" alt="CSS">
+                <img src="https://skillicons.dev/icons?i=js" alt="JavaScript">
+                <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript">
+                <img src="https://skillicons.dev/icons?i=python" alt="Python">
+                <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL">
+                <img src="https://skillicons.dev/icons?i=sqlite" alt="SQLite">
+            </div>
+        </div>
+
+        <div class="category">
+            <h3>Frameworks</h3>
+            <div class="skills-list">
+                <img src="https://skillicons.dev/icons?i=react" alt="React">
+                <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind">
+                <img src="https://skillicons.dev/icons?i=vite" alt="Vite">
+                <img src="https://skillicons.dev/icons?i=vitest" alt="Vitest">
+                <img src="https://skillicons.dev/icons?i=nextjs" alt="Next.js">
+                <img src="https://skillicons.dev/icons?i=hibernate" alt="Hibernate">
+                <img src="https://skillicons.dev/icons?i=maven" alt="Maven">
+                <img src="https://skillicons.dev/icons?i=gradle" alt="Gradle">
+                <img src="https://skillicons.dev/icons?i=selenium" alt="Selenium">
+                <img src="https://skillicons.dev/icons?i=gherkin" alt="Cucumber">
+                <img src="https://skillicons.dev/icons?i=git" alt="Git">
+            </div>
+        </div>
+
+        <div class="category">
+            <h3>Tools</h3>
+            <div class="skills-list">
+                <img src="https://skillicons.dev/icons?i=postman" alt="Postman">
+                <img src="https://skillicons.dev/icons?i=figma" alt="Figma">
+                <img src="https://skillicons.dev/icons?i=github" alt="GitHub">
+                <img src="https://skillicons.dev/icons?i=docker" alt="Docker">
+                <img src="https://skillicons.dev/icons?i=idea" alt="IntelliJ IDEA">
+                <img src="https://skillicons.dev/icons?i=webstorm" alt="Webstorm">
+                <img src="https://skillicons.dev/icons?i=androidstudio" alt="Android Studio">
+            </div>
+        </div>
+
+        <div class="category">
+            <h3>Other</h3>
+            <div class="skills-list">
+                <img src="https://skillicons.dev/icons?i=ps" alt="Photoshop">
+                <img src="assets/lr.png" alt="Lightroom" style="padding: 0">
+                <img src="https://skillicons.dev/icons?i=blender" alt="Blender">
+                <img src="https://skillicons.dev/icons?i=notion" alt="Notion">
+                <img src="assets/chatgpt.png" alt="Chatgpt">
+                <img src="https://skillicons.dev/icons?i=ubuntu" alt="Ubuntu">
+                <img src="https://skillicons.dev/icons?i=mint" alt="LinuxMint">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        
+    </section>
 </main>
+
+<footer>
+    <div class="footer-container">
+        KaviDJ &copy; 2025
+    </div>
+</footer>
 
 <script src="script.js"></script>
 <script src="assets/finisher-header.es5.min.js" type="text/javascript"></script>
