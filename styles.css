@@ -364,6 +364,169 @@
         gap: 20px;
     }
 
+    /* certificates cards */
+
+    .certificate-title {
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: rgba(255, 255, 255, 0.7); /* Optional: to ensure the title has a background */
+        padding-right: 10rem;
+        padding-left: 10rem;
+    }
+
+    .c-card-img{
+        width: 500px;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .c-card {
+        position: sticky;
+        top: 0;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 -0.3rem 0.5rem rgba(0, 0, 0, 0.10);
+        border-radius: 24px;
+        width: 500px;
+    }
+
+ @layer c-card-childs {
+            .c-card:nth-child(1) {
+                top: 1rem;
+                transform: rotate(1deg);
+            }
+
+            .c-card:nth-child(2) {
+                top: 2rem;
+                transform: rotate(-1deg);
+            }
+
+            .c-card:nth-child(3) {
+                top: 3rem;
+                transform: rotate(1deg);
+            }
+
+            .c-card:nth-child(4) {
+                top: 4rem;
+                transform: rotate(-1deg);
+            }
+
+            .c-card:nth-child(5) {
+                top: 5rem;
+                transform: rotate(1deg);
+            }
+
+            .c-card:nth-child(6) {
+                top: 6rem;
+                transform: rotate(-1deg);
+            }
+
+            .c-card:nth-child(7) {
+                top: 7rem;
+                transform: rotate(1deg);
+            }
+
+            .c-card:nth-child(8) {
+                top: 8rem;
+                transform: rotate(-1deg);
+            }
+
+            .c-card:nth-child(9) {
+                top: 9rem;
+                transform: rotate(1deg);
+            }
+
+            .c-card:nth-child(10) {
+                top: 10rem;
+                transform: rotate(-1deg);
+            }
+
+            .c-card:nth-child(11) {
+                top: 11rem;
+                transform: rotate(1deg);
+            }
+
+            .c-card:nth-child(12) {
+                top: 12rem;
+                transform: rotate(-1deg);
+            }
+
+            .c-card:nth-child(13) {
+                top: 13rem;
+                transform: rotate(1deg);
+            }
+
+            .c-card:nth-child(14) {
+                top: 14rem;
+                transform: rotate(-1deg);
+            }
+
+            .c-card:nth-child(15) {
+                top: 15rem;
+                transform: rotate(1deg);
+            }
+
+            .c-card:nth-child(16) {
+                top: 16rem;
+                transform: rotate(-1deg);
+            }
+
+            .c-card:nth-child(17) {
+                top: 17rem;
+                transform: rotate(1deg);
+            }
+
+            .c-card:nth-child(18) {
+                top: 18rem;
+                transform: rotate(-1deg);
+            }
+
+            .c-card:nth-child(19) {
+                top: 19rem;
+                transform: rotate(1deg);
+            }
+
+            .c-card:nth-child(20) {
+                top: 20rem;
+                transform: rotate(-1deg);
+            }
+
+            .c-card:nth-child(21) {
+                top: 21rem;
+                transform: rotate(1deg);
+            }
+
+            .c-card:nth-child(22) {
+                top: 22rem;
+                transform: rotate(-1deg);
+            }
+
+            .c-card:nth-child(23) {
+                top: 23rem;
+                transform: rotate(1deg);
+            }
+
+            .c-card:nth-child(24) {
+                top: 24rem;
+                transform: rotate(-1deg);
+            }
+
+            .c-card:nth-child(25) {
+                top: 25rem;
+                transform: rotate(1deg);
+            }
+
+            .c-card:nth-child(26) {
+                top: 26rem;
+                transform: rotate(-1deg);
+            }
+        }
+
+    /*project cards*/
+
     .card {
         background-color: transparent;
         padding: 20px;
@@ -424,14 +587,28 @@
         color: var(--primary);
     }
 
-    .projects{
+    .projects {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 1rem;
         margin-top: 4rem;
-        background-color: var(--primary);
+        background: linear-gradient(45deg, #c000ff, #fa0000, #ffd600);
+        background-size: 400% 400%;
+        animation: gradientAnimation 15s ease infinite;
+    }
+
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
     }
 
     .projects .section-title{
@@ -576,3 +753,4 @@
 
 
 }
+
