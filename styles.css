@@ -337,6 +337,45 @@
         padding-right: 5px;
     }
 
+    .experience {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .experience-card {
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 800px;
+    }
+
+    .company-logo img {
+        width: 80px;
+        height: auto;
+        margin-right: 1.5rem;
+        border-radius: 12px;
+    }
+
+    .content {
+        flex: 1;
+    }
+
+    .content h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 0.5rem;
+    }
+
 
     .timeline {
         display: flex;
