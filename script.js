@@ -27,3 +27,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     filterProjects("all"); // Show all projects initially
 });
+
+let goTopBtn = document.getElementById("goTopBtn");
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        goTopBtn.style.display = "block";
+    } else {
+        goTopBtn.style.display = "none";
+    }
+};
+
+goTopBtn.onclick = function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+};

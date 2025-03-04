@@ -409,7 +409,7 @@
         margin-top: 4rem;
         margin-bottom: 2rem;
         position: sticky;
-        top: 0;
+        top: 20px;
         z-index: 10;
         background-color: rgba(255, 255, 255, 0.7); /* Optional: to ensure the title has a background */
         padding-right: 10rem;
@@ -424,7 +424,7 @@
 
     .c-card {
         position: sticky;
-        top: 0;
+        top: 90px;
         background: white;
         padding: 1rem;
         box-shadow: 0 -0.3rem 0.5rem rgba(0, 0, 0, 0.10);
@@ -789,6 +789,187 @@
     .skills-list img:hover {
         transform: scale(1.1);
     }
+
+    .contact {
+        padding: 2rem;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact .section-title{
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+
+    }
+
+    .contact-h3 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        color: var(--primary);
+        text-align: center;
+    }
+
+    .contact-p{
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .contact-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .contact-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1rem;
+        color: #007bff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        background-color: rgba(0, 123, 255, 0.1);
+    }
+
+    .contact-link img {
+        width: 40px;
+
+    }
+
+    .contact-link:hover {
+        color: white;
+        background-color: #007bff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+        .contact-links {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 2px solid #ccc;
+        border-radius: 12px;
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        border-color: var(--primary);
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .contact-form textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    .contact-form button {
+        padding: 0.75rem;
+        border: none;
+        border-radius: 12px;
+        background-color: var(--primary);
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 1rem;
+    }
+
+    .contact-form button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+        .contact {
+            padding: 1.5rem;
+        }
+
+        .contact-container {
+            gap: 1.5rem;
+        }
+
+        .contact-links {
+            flex-direction: column;
+        }
+
+        .contact-form {
+            width: 100%;
+        }
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
+
+    .go-top-button {
+        display: none; /* Hidden by default */
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+    }
+
+    .go-top-button:hover {
+        background-color: #0056b3;
+    }
+
 
 
 }

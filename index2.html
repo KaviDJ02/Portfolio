@@ -16,10 +16,10 @@
     <a href="/" class="logo-text poppins-bold">KaviDJ</a>
     <nav class="nav">
         <ul class="nav-links poppins-regular">
-            <li><a href="/">About</a> </li>
-            <li><a href="/">Projects</a> </li>
-            <li><a href="/">Skills</a> </li>
-            <li><a href="/">Contact</a> </li>
+            <li><a href="#about">About</a> </li>
+            <li><a href="#projects">Projects</a> </li>
+            <li><a href="#skills">Skills</a> </li>
+            <li><a href="#contact">Contact</a> </li>
         </ul>
     </nav>
 </header>
@@ -42,7 +42,7 @@
         </section>
     </div>
 
-    <section class="about">
+    <section id="about" class="about">
         <h2 class="section-title poppins-bold">About Me</h2>
 
         <p class="section-subtitle poppins-regular">
@@ -118,7 +118,6 @@
         <h2 class="certificate-title poppins-bold">Certificates</h2>
 
         <div class="certificates">
-
             <div class="c-card">
                 <img src="assets/certificates/c0.webp" alt="certificate0" class="c-card-img">
             </div>
@@ -173,13 +172,11 @@
             <div class="c-card">
                 <img src="assets/certificates/c26.webp" alt="certificate26" class="c-card-img">
             </div>
-
-
         </div>
 
     </section>
 
-    <section class="projects">
+    <section id="projects" class="projects">
         <h2 class="section-title poppins-bold">Projects</h2>
 
         <div class="filter-container poppins-regular">
@@ -277,7 +274,7 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section id="skills" class="skills">
         <h2 class="section-title poppins-bold">Skills</h2>
         <div class="category">
             <h3>Programming & Development</h3>
@@ -337,14 +334,57 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section id="contact" class="contact">
+        <h2 class="section-title poppins-bold">Contact</h2>
 
+        <h3 class="contact-h3 poppins-medium">Get in touch</h3>
+        <p class="contact-p poppins-regular">Feel free to reach out for any inquiries, collaborations, or just to say hi!</p>
+
+        <div class="contact-container poppins-regular">
+            <div class="contact-info">
+
+
+                <div class="contact-links">
+                    <a href="mailto:kdjtec02@gmail.com" class="contact-link" target="_blank">
+                        <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail"> Gmail
+                    </a>
+                    <a href="https://wa.me/94771234567" class="contact-link" target="_blank">
+                        <img src="assets/whatsapp.png" alt="WhatsApp"> WhatsApp
+                    </a>
+                    <a href="https://github.com/KavinduJayasundara" class="contact-link" target="_blank">
+                        <img src="https://skillicons.dev/icons?i=github" alt="GitHub"> GitHub
+                    </a>
+                    <a href="https://www.behance.net/KavinduJayasundara" class="contact-link" target="_blank">
+                        <img src="assets/behance.png" alt="Behance" style="width: 50px"> Behance
+                    </a>
+                    <a href="https://www.facebook.com/KavinduJayasundara" class="contact-link" target="_blank">
+                        <img src="assets/fb.png" alt="Facebook" style="width: 50px"> Facebook
+                    </a>
+                    <a href="https://www.instagram.com/KavinduJayasundara" class="contact-link" target="_blank">
+                        <img src="https://skillicons.dev/icons?i=instagram" alt="Instagram"> Instagram
+                    </a>
+                    <a href="https://www.linkedin.com/in/kavindujayasundara/" class="contact-link" target="_blank">
+                        <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"> LinkedIn
+                    </a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="https://formspree.io/f/xnqoqzqz" method="POST">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <button type="submit" class="primary-button">Send</button>
+                </form>
+            </div>
+        </div>
     </section>
+
 </main>
 
 <footer>
-    <div class="footer-container">
+    <div class="footer-container poppins-regular">
         KaviDJ &copy; 2025
+        <button id="goTopBtn" class="go-top-button">Go to Top</button>
     </div>
 </footer>
 
