@@ -43,7 +43,6 @@ goTopBtn.onclick = function() {
     document.documentElement.scrollTop = 0;
 };
 
-
 document.getElementById("cvButton").addEventListener("click", function() {
     window.open("assets/cv.pdf", "_blank");
 });

@@ -191,11 +191,11 @@
 
 @layer base {
     /* Prevent horizontal scroll */
-    html, body {
-        overflow-x: hidden;
-    }
+    /*html, body {*/
+    /*    overflow-x: hidden;*/
+    /*}*/
 
-    /* Ensure all elements fit within the viewport */
+
     * {
         max-width: 100%;
         box-sizing: border-box;
@@ -434,9 +434,6 @@
         position: sticky;
         top: 20px;
         z-index: 10;
-        background-color: rgba(255, 255, 255, 0.7); /* Optional: to ensure the title has a background */
-        padding-right: 10rem;
-        padding-left: 10rem;
     }
 
     .c-card-img{
@@ -704,12 +701,10 @@
     }
 
     .dropdown {
-        display: none;
         margin: 10px 0;
         border-radius: 12px;
         background-color: var(--bgColor);
         max-width: 300px;
-
     }
 
     .dropdown select {
@@ -720,10 +715,15 @@
         border-radius: 12px;
         background-color: transparent;
         color: #000000;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
+        /*appearance: none;*/
+        /*-webkit-appearance: none;*/
+        /*-moz-appearance: none;*/
         cursor: pointer;
+    }
+
+    .dropdown select:focus {
+        outline: none;
+        border: 2px solid var(--primary);
     }
 
     @media (max-width: 768px) {
@@ -756,9 +756,12 @@
     }
 
     .tech {
-        font-size: 5px;
-        color: #000000;
+        color: var(--bgColor);
         margin: 10px 0;
+        border-radius: 12px;
+        padding: 3px 5px;
+        background-color: #ffe5de;
+
     }
 
     .github-circle {
@@ -1013,6 +1016,10 @@
             flex-direction: column;
             padding: 1rem;
             align-items: center;
+        }
+
+        .nav-links{
+            padding-left: 0px;
         }
 
 
