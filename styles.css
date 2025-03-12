@@ -341,6 +341,11 @@
         margin-top: 4rem;
     }
 
+    .section-title{
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+    }
+
     .section-subtitle{
         padding-inline: 30% ;
         flex: auto;
@@ -672,9 +677,6 @@
 
     .projects .section-title{
         color: var(--bgColor);
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
     }
 
     /*.projects-container {*/
@@ -846,9 +848,10 @@
         font-size: 24px;
     }
 
-    h3 {
+    .category h3 {
         font-size: 18px;
-        margin-top: 20px;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
         color: var(--primary); /* Customize color */
     }
 
@@ -883,9 +886,6 @@
     }
 
     .contact .section-title{
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
         text-align: center;
     }
 
@@ -924,7 +924,7 @@
         align-items: center;
         gap: 0.5rem;
         font-size: 1rem;
-        color: #007bff;
+        color: black;
         text-decoration: none;
         padding: 0.5rem 1rem;
         border-radius: 4px;
@@ -938,8 +938,7 @@
     }
 
     .contact-link:hover {
-        color: var(--bgColor);
-        background-color: #007bff;
+        color: var(--primary);
     }
 
     /* Responsive Design */
@@ -995,7 +994,7 @@
     }
 
     .contact-form button:hover {
-        background-color: #0056b3;
+        background-color: #ff4f4f;
     }
 
     /* Responsive Design */
@@ -1063,8 +1062,6 @@
         .nav-links{
             padding-left: 0px;
         }
-
-
 
         .hero {
             margin-top: 2rem;
@@ -1138,4 +1135,5 @@
     }
 
 }
+
 
