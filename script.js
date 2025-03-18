@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 project.style.display = "none";
             }
         });
+        AOS.init();
     }
 
     buttons.forEach(button => {
