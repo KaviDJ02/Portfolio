@@ -48,52 +48,6 @@ document.getElementById("cvButton").addEventListener("click", function() {
     window.open("assets/cv.pdf", "_blank");
 });
 
-// Add this to your script.js or within a <script> tag in index.html
-window.addEventListener('load', function() {
-    try {
-        new FinisherHeader({
-            "count": 10,
-            "size": {
-                "min": 1300,
-                "max": 1500,
-                "pulse": 0
-            },
-            "speed": {
-                "x": {
-                    "min": 0.1,
-                    "max": 0.6
-                },
-                "y": {
-                    "min": 0.1,
-                    "max": 0.6
-                }
-            },
-            "colors": {
-                "background": "#eb2a2a",
-                "particles": [
-                    "#ff4848",
-                    "#000000",
-                    "#2235e5",
-                    "#000000",
-                    "#ff0000"
-                ]
-            },
-            "blending": "overlay",
-            "opacity": {
-                "center": 0.5,
-                "edge": 0.05
-            },
-            "skew": 0,
-            "shapes": [
-                "c"
-            ]
-        });
-    } catch (error) {
-        console.error('FinisherHeader failed to initialize:', error);
-        document.querySelector('.headerNav').style.backgroundColor = '#ffffff'; // Fallback background color
-    }
-});
-
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector(".contact-form form");
 
@@ -123,4 +77,21 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert("An error occurred. Please try again.");
             });
     });
+});
+
+window.addEventListener("scroll", () => {
+    const blob = document.querySelector(".blob-outer-container");
+    const scrollY = window.scrollY;
+
+    // Fade out as user scrolls past 300px
+    const fadeStart = 100;
+    const fadeEnd = 400;
+    let opacity = 1;
+
+    if (scrollY > fadeStart) {
+        opacity = 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart);
+        if (opacity < 0) opacity = 0;
+    }
+
+    blob.style.opacity = opacity;
 });
